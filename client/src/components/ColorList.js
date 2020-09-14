@@ -11,7 +11,7 @@ const ColorList = ({ colors, updateColors }) => {
  console.log(colors)
   const [editing, setEditing] = useState(false);
   const [colorToEdit, setColorToEdit] = useState(initialColor);
-const {id} = useParams()
+
 
 
   const editColor = color => {
@@ -34,7 +34,7 @@ console.log(colorToEdit)
   };
 
   const deleteColor = color => {
-	axios
+	axiosWithAuth()
 		.delete(`http://localhost:5000/api/color/${colorToEdit.id}`)
 		.then((res) => {
 			updateColors(res.data);
@@ -93,11 +93,6 @@ console.log(colorToEdit)
 					<div className="button-row">
 						<button type="submit">save</button>
 						<button onClick={() => setEditing(false)}>cancel</button>
-					</div>
-					<div className="button-row">
-						<button onClick={deleteColor} type="submit">
-							delete
-						</button>
 					</div>
 				</form>
 			)}

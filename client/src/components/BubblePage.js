@@ -3,14 +3,11 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { axiosWithAuth } from "../API/axiosAuth";
 import Bubbles from "./Bubbles";
 import ColorList from "./ColorList";
-import { useParams } from "react-router-dom";
+
 
 
 const BubblePage = () => {
   const [colorList, setColorList] = useState([]);
-
-const params = useParams();
-console.log(params);
 
 const getData = () => {
 	axiosWithAuth()
