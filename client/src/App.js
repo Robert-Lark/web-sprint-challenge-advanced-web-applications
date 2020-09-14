@@ -7,8 +7,12 @@ import PrivateRoute from "./components/PrivateRoute";
 import Login from "./components/Login";
 import BubblePage from "./components/BubblePage";
 
+
+
 function App() {
-	const classes = useStyles();
+
+
+  const classes = useStyles();
 	return (
 		<Router>
 			<Grid container className={classes.container}>
