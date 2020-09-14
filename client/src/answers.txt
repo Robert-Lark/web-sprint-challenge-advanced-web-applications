@@ -1,0 +1,17 @@
+Explain what a token is used for.
+
+Tokens are used so that servers can verify that the user is authenticated to use the services they provide & access their data. 
+
+
+What steps can you take in your web apps to keep your data secure?
+
+Use an SSL certificate. Make sure the site is using https instead of http. Require users to provide log-in credentials. 
+
+Describe how web servers work.
+
+A website will send a request to a physical webserver which checks the source and any authentification requirements and will respond with either
+the data requested or an error message
+
+Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+PUT, GET , POST & DELETE
