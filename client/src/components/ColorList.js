@@ -44,7 +44,8 @@ console.log(colorToEdit)
   return (
 		<div className="colors-wrap">
 			<p>colors</p>
-			<ul>
+			{/* put id on ul to check how many li's there are */}
+		  <ul data-testid="test">
 				{colors.map((color) => (
 					<li key={color.color} onClick={() => editColor(color)}>
 						<span>
